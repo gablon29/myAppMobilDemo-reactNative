@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { styles } from "../styles/stylesRepositories";
 import RepositoriesStats from "./RepositoriesStats";
+import RepositoriesHeader from "./RepositoriesHeader";
 
 const RepositoriesItem = (props) => {
   return (
     <View key={props.id} style={styles.container}>
-      <Text style={styles.title}>Fullname: {props.fullname}</Text>
-      <Text>Lenguaje: {props.language}</Text>
+      <RepositoriesHeader {...props} />
       <RepositoriesStats {...props} />
     </View>
   );
