@@ -1,12 +1,12 @@
 import React from "react";
-import Constants from "expo-constants";
 import { View, Text } from "react-native";
 import RepositoriesList from "./RepositoriesList";
+import AppBar from "./AppBar";
 
 const Main = () => {
   return (
-    <View style={{ marginTop: Constants.statusBarHeight, flexGrow: 1 }}>
-      <Text>Rate Repository Application</Text>
+    <View style={{ flexGrow: 1 }}>
+      <AppBar />
       <RepositoriesList />
     </View>
   );
