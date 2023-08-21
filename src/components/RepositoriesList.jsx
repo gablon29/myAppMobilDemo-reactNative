@@ -6,6 +6,7 @@ import RepositoriesItem from "./RepositoriesItem";
 const RepositoriesList = () => {
   return (
     <FlatList
+      style={{ flex: 1 }}
       data={repositories}
       ItemSeparatorComponent={() => <Text> </Text>}
       renderItem={({ item: repo }) => <RepositoriesItem {...repo} />}

@@ -1,14 +1,17 @@
 import React from "react";
-import { View, Text } from "react-native";
-import RepositoriesList from "./RepositoriesList";
+import { View } from "react-native";
 import AppBar from "./AppBar";
+import { Route, Routes, NativeRouter } from "react-router-native";
+import Home from "./Home";
 
 const Main = () => {
   return (
-    <View style={{ flexGrow: 1 }}>
+    <NativeRouter>
       <AppBar />
-      <RepositoriesList />
-    </View>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+      </Routes>
+    </NativeRouter>
   );
 };
 

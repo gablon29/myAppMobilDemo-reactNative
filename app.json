@@ -32,6 +32,9 @@
         "projectId": "90d74c12-19f0-4eca-b521-e47d0ead3952"
       }
     },
-    "owner": "cesardev29"
+    "owner": "cesardev29",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

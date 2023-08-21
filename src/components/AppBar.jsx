@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { styles } from "../styles/stylesRepositories";
 import { Style_AppBar } from "../styles/Style_AppBar";
 
 const AppBar = () => {

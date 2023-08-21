@@ -1,12 +1,9 @@
-import React from 'react';
-import { View } from 'react-native';
-import Main from './src/components/Main';
-
+import React from "react";
+import Main from "./src/components/Main";
+import { NativeRouter } from "react-router-native";
 
 const App = () => {
-  return (
-    <Main />
-  );
+  return <Main />;
 };
 
 export default App;
