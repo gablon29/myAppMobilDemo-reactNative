@@ -3,8 +3,8 @@ import Home from "../../src/components/Home";
 
 export default function Layout() {
   return (
-    <Tabs>
-      <Tabs.Screen name="index" />
+    <Tabs screenOptions={{ tabBarLabelPosition: "below-icon" }}>
+      <Tabs.Screen name="index" options={{ headerTitle: "Repositorios" }} />
       <Tabs.Screen name="List" />
     </Tabs>
   );
