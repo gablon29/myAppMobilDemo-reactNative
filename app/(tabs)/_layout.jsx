@@ -1,11 +1,18 @@
 import { Tabs } from "expo-router";
-import Home from "../../src/components/Home";
 
-export default function Layout() {
+export default () => {
   return (
-    <Tabs screenOptions={{ tabBarLabelPosition: "below-icon" }}>
-      <Tabs.Screen name="index" options={{ headerTitle: "Repositorios" }} />
+    <Tabs>
+      <Tabs.Screen
+        name="index"
+        options={{
+          tabBarLabel: "Repositorios",
+          title: "Repositorios",
+          headerTitle: "Repositorios",
+        }}
+      />
       <Tabs.Screen name="List" />
+      <Tabs.Screen name="SignIng" />
     </Tabs>
   );
-}
+};
