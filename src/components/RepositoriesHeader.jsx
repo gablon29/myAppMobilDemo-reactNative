@@ -10,6 +10,7 @@ const RepositoriesHeader = (props) => {
         <Text style={styles.title}>{props.fullname}</Text>
         <Text style={styles.lenguages}>{props.language}</Text>
       </View>
+      // Incluyendo el nuevo servidor
     </View>
   );
 };
