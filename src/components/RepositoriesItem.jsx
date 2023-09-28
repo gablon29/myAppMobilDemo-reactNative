@@ -12,5 +12,4 @@ const RepositoriesItem = (props) => {
     </View>
   );
 };
-
 export default RepositoriesItem;
