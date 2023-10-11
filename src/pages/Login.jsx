@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, TextInput, View } from "react-native";
 import { Formik } from "formik";
+import { StyleForm } from "../styles/Style_AppForm";
 
 const initialValue = {
   email: "",
@@ -14,15 +15,17 @@ const Login = () => {
     >
       {/* Aqui pasamos una funcion que al ejecutarse devuelve lo que tiene
     que renderizar */}
-      {({ handleChange, handleSubmit, values }) => {
+      {({ handleChange, handleSubmit, values, resetForm }) => {
         return (
           <View>
             <TextInput
+              style={StyleForm.input}
               placeholder="email"
               value={values.email}
               onChangeText={handleChange("email")}
             />
             <TextInput
+              style={StyleForm.input}
               placeholder="password"
               value={values.password}
               onChangeText={handleChange("password")}
