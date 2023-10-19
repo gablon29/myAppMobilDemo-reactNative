@@ -2,31 +2,17 @@ import React from "react";
 import { Button, TextInput, View } from "react-native";
 import { Formik } from "formik";
 import FormitInputValue from "../hooks/FormitInputValue";
+import { loginValidationSchena } from "../validation/login.js";
 
 const initialValue = {
   email: "",
   password: "",
 };
 
-const validate = (value) => {
-  const error = {};
-  if (!value.email) {
-    error.email = "Email is required";
-  } else if (
-    !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-      value.email
-    )
-  ) {
-    error.email = "Writte valid email";
-  }
-  console.log(error);
-  return error;
-};
-
 const Login = () => {
   return (
     <Formik
-      validate={validate}
+      validationSchema={loginValidationSchena}
       initialValues={initialValue}
       onSubmit={(value) => console.log(value)}
     >
