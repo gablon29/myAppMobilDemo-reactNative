@@ -10,4 +10,12 @@ export const StyleForm = StyleSheet.create({
     textAlign: "center",
     margin: 10,
   },
+  error: {
+    color: "red",
+    backgroundColor: "#E99D92",
+    textAlign: "center",
+    marginHorizontal: 100,
+    fontWeight: "bold",
+    borderRadius: 50,
+  },
 });

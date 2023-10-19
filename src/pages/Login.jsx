@@ -7,9 +7,26 @@ const initialValue = {
   email: "",
   password: "",
 };
+
+const validate = (value) => {
+  const error = {};
+  if (!value.email) {
+    error.email = "Email is required";
+  } else if (
+    !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+      value.email
+    )
+  ) {
+    error.email = "Writte valid email";
+  }
+  console.log(error);
+  return error;
+};
+
 const Login = () => {
   return (
     <Formik
+      validate={validate}
       initialValues={initialValue}
       onSubmit={(value) => console.log(value)}
     >
@@ -18,8 +35,12 @@ const Login = () => {
       {({ handleSubmit }) => {
         return (
           <View>
-            <FormitInputValue name="email" />
-            <FormitInputValue name="password" />
+            <FormitInputValue name="email" placeholder="email" />
+            <FormitInputValue
+              name="password"
+              placeholder="password"
+              secureTextEntry
+            />
             <Button onPress={handleSubmit} title="Login">
               Login
             </Button>
