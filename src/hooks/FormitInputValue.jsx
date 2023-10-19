@@ -7,7 +7,7 @@ const FormitInputValue = ({ name, ...props }) => {
   return (
     <>
       <TextInput
-        style={StyleForm.input}
+        style={meta.error ? StyleForm.errorInput : StyleForm.input}
         value={field.value}
         onChangeText={(value) => helpers.setValue(value)}
         {...props}
