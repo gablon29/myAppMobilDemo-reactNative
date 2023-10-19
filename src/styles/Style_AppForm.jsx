@@ -20,5 +20,11 @@ export const StyleForm = StyleSheet.create({
   },
   errorInput: {
     borderColor: "red",
+    borderRadius: 5,
+    borderWidth: 2,
+    marginBottom: 10,
+    paddingVertical: 8,
+    textAlign: "center",
+    margin: 10,
   },
 });
