@@ -18,4 +18,7 @@ export const StyleForm = StyleSheet.create({
     fontWeight: "bold",
     borderRadius: 50,
   },
+  errorInput: {
+    borderColor: "red",
+  },
 });
