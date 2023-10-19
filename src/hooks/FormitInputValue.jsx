@@ -1,28 +1,19 @@
 import { useField } from "formik";
-import { TextInput } from "react-native";
+import { TextInput, Text } from "react-native";
 import { StyleForm } from "../styles/Style_AppForm";
 
 const FormitInputValue = ({ name, ...props }) => {
   const [field, meta, helpers] = useField(name);
-  if (name === "password") {
-    return (
+  return (
+    <>
       <TextInput
-        placeholder={name}
         style={StyleForm.input}
         value={field.value}
         onChangeText={(value) => helpers.setValue(value)}
-        secureTextEntry
+        {...props}
       />
-    );
-  } else {
-    return (
-      <TextInput
-        placeholder={name}
-        style={StyleForm.input}
-        value={field.value}
-        onChangeText={(value) => helpers.setValue(value)}
-      />
-    );
-  }
+      {meta.error && <Text style={StyleForm.error}>{meta.error}</Text>}
+    </>
+  );
 };
 export default FormitInputValue;
